@@ -17,7 +17,7 @@ const Register = () => {
     e.preventDefault(); //By default in js on a button click page is refreshed so we want to stop it with this
     try {
       const res = await axios.post(
-        `${process.env.REACT_APP_API}/api/v1/auth/register`,
+        "/api/v1/auth/register",
         { name, email, password, phone, address }
       );
       if (res && res.data.success) {
